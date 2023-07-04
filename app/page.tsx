@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import Generator from './Generator';
 
 export const runtime = 'edge';
 
@@ -18,10 +17,7 @@ export default function Home() {
         <h1 className='text-3xl font-extrabold text-[#ededed] sm:text-5xl md:text-6xl lg:text-7xl'>
           Shortcut URL
         </h1>
-        <div className='flex w-full flex-row gap-1 space-x-4 py-8'>
-          <Input placeholder='Enter link here' className='border-slate-500'></Input>
-          <Button className='w-44'>Generate url</Button>
-        </div>
+        <Generator />
       </div>
     </section>
   );
