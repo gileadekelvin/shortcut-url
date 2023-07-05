@@ -34,6 +34,7 @@ const Generator = () => {
           type='text'
           placeholder='Enter link here'
           className='border-slate-500'
+          onChange={() => setResult({ error: null, success: null })}
           autoFocus
           required
         />
