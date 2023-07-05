@@ -14,9 +14,9 @@ const Generator = () => {
   }>({ error: null, success: null });
 
   return (
-    <div className='flex w-full flex-col gap-6 space-x-4 py-8'>
+    <div className='flex w-full flex-col gap-6 py-8'>
       <form
-        className='flex w-full flex-row gap-4'
+        className='flex w-full flex-col justify-center gap-4 md:flex-row items-center'
         action={async (formData) => {
           const origin =
             typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
