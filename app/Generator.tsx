@@ -15,7 +15,9 @@ const Generator = () => {
       <form
         className='flex w-full flex-row gap-4'
         action={async (formData) => {
-          const data = await generateURL(formData);
+          const origin =
+            typeof window !== 'undefined' && window.location.origin ? window.location.origin : '';
+          const data = await generateURL(formData, origin);
           if (data.error) {
             setResult({ error: data.error, success: null });
           } else {
